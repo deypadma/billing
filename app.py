@@ -18,7 +18,8 @@ def shopping_bill():
         quantity = int(request.form['quantity'])
         
         total_cost = 0
-
+        
+        # total cost calculation
         if operation == 'protinex':
             total_cost = 1500 * quantity
         elif operation == 'chyawanprash':
@@ -31,7 +32,8 @@ def shopping_bill():
             total_cost = 700 * quantity
         else:
             total_cost = 500 * quantity
-
+        
+        # final cost calculation with discount
         if total_cost < 1000:
             discount = total_cost * (10/100)
         elif total_cost >= 1000 and total_cost < 3000:
@@ -45,4 +47,4 @@ def shopping_bill():
     
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0',port=5001)
+    app.run(host='0.0.0.0',port=5000)
