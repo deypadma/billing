@@ -1,4 +1,4 @@
 # billing
-bill calculation using Flask
+Bill calculation using Flask
 
-deployment link - https://yellow-pilot-ntdmz.ineuron.app:5000/
+Deployment link - https://yellow-pilot-ntdmz.ineuron.app:5000/
