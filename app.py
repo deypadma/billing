@@ -16,22 +16,23 @@ def shopping_bill():
     if request.method == 'POST' :
         operation = request.form['operation']
         quantity = int(request.form['quantity'])
+        cost = int(request.form['cost'])
         
         total_cost = 0
         
         # total cost calculation
         if operation == 'protinex':
-            total_cost = 1500 * quantity
+            total_cost = cost * quantity
         elif operation == 'chyawanprash':
-            total_cost = 200 * quantity
+            total_cost = cost * quantity
         elif operation == 'almond':
-            total_cost = 800 * quantity
+            total_cost = cost * quantity
         elif operation == 'oats':
-            total_cost = 100 * quantity
+            total_cost = cost * quantity
         elif operation == 'cashew':
-            total_cost = 700 * quantity
+            total_cost = cost * quantity
         else:
-            total_cost = 500 * quantity
+            total_cost = cost * quantity
         
         # final cost calculation with discount
         if total_cost < 1000:
